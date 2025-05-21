@@ -24,7 +24,7 @@ class Tabs {
       activeTabIndex: [...this.buttonElements]
         .findIndex((buttonElement) => buttonElement.classList.contains(this.stateClasses.isActive))
     })
-    this.limitTabIndex = this.buttonElements.length - 1
+    this.limitTabsIndex = this.buttonElements.length - 1
     this.bindEvents()
   }
 
@@ -68,14 +68,14 @@ class Tabs {
 
   previousTab = () => {
     const newTabIndex = this.state.activeTabIndex === 0
-      ? this.limitTabIndex
+      ? this.limitTabsIndex
       : this.state.activeTabIndex - 1
 
     this.activateTab(newTabIndex)
   }
 
   nextTab = () => {
-    const newTabIndex = this.state.activeTabIndex === this.limitTabIndex
+    const newTabIndex = this.state.activeTabIndex === this.limitTabsIndex
       ? 0
       : this.state.activeTabIndex + 1
 
@@ -87,7 +87,7 @@ class Tabs {
   }
 
   lastTab = () => {
-    this.activateTab(this.limitTabIndex)
+    this.activateTab(this.limitTabsIndex)
   }
 
   onButtonClick(buttonIndex) {
