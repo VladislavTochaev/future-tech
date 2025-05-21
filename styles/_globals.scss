@@ -81,13 +81,6 @@ svg * {
   transition-duration: var(--transition-duration);
 }
 
-a,
-button {
-  @include hover {
-    transform: scale(1.05);
-  }
-}
-
 a {
   color: inherit;
 
