@@ -20,6 +20,8 @@
     }
 
     @include tablet-above {
+      overflow-x: hidden;
+
       .bordered-grid__item {
         /**
         Элементы в 1-й и 2-й колонке
