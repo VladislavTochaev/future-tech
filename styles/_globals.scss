@@ -87,7 +87,7 @@ a {
   @include hover {
     color: var(--color-accent);
   }
-  
+
   &[class] {
     text-decoration: none;
   }

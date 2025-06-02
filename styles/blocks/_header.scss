@@ -24,7 +24,7 @@
     @include mobile {
       padding-block: rem(14);
     }
-  }  
+  }
 
   &__body {
     padding-block: rem(24);
@@ -56,7 +56,7 @@
       row-gap: 3rem;
       padding: 1rem;
       background-color: var(--color-dark-10);
-      transition-duration: var(--transition-duration);  
+      transition-duration: var(--transition-duration);
 
       &:not(.is-active) {
         @include hide;

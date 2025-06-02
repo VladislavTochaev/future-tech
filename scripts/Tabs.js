@@ -44,7 +44,7 @@ class Tabs {
   }
 
   updateUI() {
-    const { activeTabIndex } = this.state
+    const {activeTabIndex} = this.state
 
     this.buttonElements.forEach((buttonElement, index) => {
       const isActive = index === activeTabIndex
@@ -95,7 +95,7 @@ class Tabs {
   }
 
   onKeyDown = (event) => {
-    const { code, metaKey } = event
+    const {code, metaKey} = event
 
     const action = {
       ArrowLeft: this.previousTab,
@@ -104,7 +104,7 @@ class Tabs {
       End: this.lastTab,
     }[code]
 
-    const isMacHomeKey = metaKey && code ==='ArrowLeft'
+    const isMacHomeKey = metaKey && code === 'ArrowLeft'
 
     if (isMacHomeKey) {
       this.firstTab()

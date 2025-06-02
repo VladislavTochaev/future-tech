@@ -16,9 +16,9 @@
   --color-red: #FF5500;
 
   --gradient: linear-gradient(
-    45deg,
-    var(--color-dark-15) 64%,
-    var(--color-accent) 136%
+      45deg,
+      var(--color-dark-15) 64%,
+      var(--color-accent) 136%
   );
 
   --border: #{rem(1)} solid var(--color-dark-15);
