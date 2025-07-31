@@ -10,8 +10,8 @@
   }
 
   &:has(.news-card__summary) {
-    column-gap: rem(80);
     align-items: center;
+    column-gap: rem(80);
     padding-block: fluid(80, 40);
 
     @include laptop {

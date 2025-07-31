@@ -34,7 +34,7 @@
 
     &-main {
       display: grid;
-      row-gap: fluid(50, 20);
+      row-gap: fluid(50, 24);
 
       @include tablet {
         justify-content: start;
@@ -49,7 +49,7 @@
       display: grid;
       row-gap: fluid(16, 6);
 
-      &:has(.rating-view) {
+      &:has(.card__rating-view) {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -136,12 +136,6 @@
       gap: fluid(14, 10) rem(20);
     }
 
-    &.tile {
-      @include mobile-s {
-        padding: rem(20);
-      }
-    }
-
     &:not(.tile) {
       @include mobile-s {
         grid-template: initial;
@@ -149,6 +143,12 @@
         .card__cell-link {
           grid-area: initial;
         }
+      }
+    }
+
+    &.tile {
+      @include mobile-s {
+        padding: rem(20);
       }
     }
 

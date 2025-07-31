@@ -8,7 +8,7 @@
 
   @include tablet {
     grid-template-columns: 1fr auto;
-    grid-template-areas: 
+    grid-template-areas:
       'author link'
       'body body';
     row-gap: rem(30);

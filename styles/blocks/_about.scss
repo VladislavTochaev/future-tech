@@ -14,7 +14,6 @@
     grid-template-columns: auto 1fr;
     grid-template-areas:
       'icon info'
-      'icon info'
       'icon description';
     align-items: center;
     gap: rem(30) fluid(80, 20);

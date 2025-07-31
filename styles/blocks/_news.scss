@@ -2,7 +2,7 @@
 
 .news {
   display: grid;
-  row-gap: rem(60);
+  row-gap: rem(80);
   padding-block: fluid(80, 40);
 
   @include laptop {
@@ -20,7 +20,7 @@
     display: grid;
     grid-template-columns: repeat(
       auto-fit,
-        minmax(rem(358), 1fr)
+      minmax(rem(358), 1fr)
     );
     gap: rem(30);
   }
