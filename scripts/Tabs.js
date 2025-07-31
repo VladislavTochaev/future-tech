@@ -25,14 +25,14 @@ class Tabs extends BaseComponent {
     this.contentElements = this.rootElement.querySelectorAll(this.selectors.content)
     this.state = this.getProxyState({
       activeTabIndex: [...this.buttonElements]
-        .findIndex((buttonElement) => buttonElement.classList.contains(this.stateClasses.isActive))
+        .findIndex((buttonElement) => buttonElement.classList.contains(this.stateClasses.isActive)),
     })
     this.limitTabsIndex = this.buttonElements.length - 1
     this.bindEvents()
   }
 
   updateUI() {
-    const {activeTabIndex} = this.state
+    const { activeTabIndex } = this.state
 
     this.buttonElements.forEach((buttonElement, index) => {
       const isActive = index === activeTabIndex
@@ -83,7 +83,7 @@ class Tabs extends BaseComponent {
   }
 
   onKeyDown = (event) => {
-    const {code, metaKey} = event
+    const { code, metaKey } = event
 
     const action = {
       ArrowLeft: this.previousTab,
@@ -93,14 +93,12 @@ class Tabs extends BaseComponent {
     }[code]
 
     const isMacHomeKey = metaKey && code === 'ArrowLeft'
-
     if (isMacHomeKey) {
       this.firstTab()
       return
     }
 
     const isMacEndKey = metaKey && code === 'ArrowRight'
-
     if (isMacEndKey) {
       this.lastTab()
       return

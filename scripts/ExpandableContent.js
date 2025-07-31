@@ -1,4 +1,4 @@
-import pxToRem from "./utils/pxToRem.js"
+import pxToRem from './utils/pxToRem.js'
 
 const rootSelector = '[data-js-expandable-content]'
 
@@ -9,7 +9,7 @@ class ExpandableContent {
   }
 
   stateClasses = {
-    isExpanded: 'is-expanded'
+    isExpanded: 'is-expanded',
   }
 
   animationParams = {
@@ -19,7 +19,7 @@ class ExpandableContent {
 
   constructor(rootElement) {
     this.rootElement = rootElement
-    this.buttonElement = rootElement.querySelector(this.selectors.button)
+    this.buttonElement = this.rootElement.querySelector(this.selectors.button)
     this.bindEvents()
   }
 
@@ -29,10 +29,10 @@ class ExpandableContent {
     this.rootElement.classList.add(this.stateClasses.isExpanded)
     this.rootElement.animate([
       {
-         maxHeight: `${pxToRem(offsetHeight)}rem`
+        maxHeight: `${pxToRem(offsetHeight)}rem`,
       },
       {
-        maxHeight: `${pxToRem(scrollHeight)}rem`
+        maxHeight: `${pxToRem(scrollHeight)}rem`,
       },
     ], this.animationParams)
   }

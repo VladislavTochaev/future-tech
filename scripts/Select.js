@@ -98,7 +98,7 @@ class Select extends BaseComponent {
   }
 
   expand() {
-    this.state.isExpaned = true
+    this.state.isExpanded = true
   }
 
   collapse() {
@@ -181,7 +181,7 @@ class Select extends BaseComponent {
       return
     }
 
-    if (this.state.currentOptionIndex < this.optionElements.length -1) {
+    if (this.state.currentOptionIndex < this.optionElements.length - 1) {
       this.state.currentOptionIndex++
     }
   }
