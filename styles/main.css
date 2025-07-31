@@ -788,6 +788,16 @@ button[aria-label]::before {
     height: 3rem;
   }
 }
+@media (any-hover: hover) {
+  .soc1als--3-cols .soc1als__link:hover {
+    border-color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .soc1als--3-cols .soc1als__link:active {
+    border-color: var(--color-accent);
+  }
+}
 .soc1als__list {
   display: flex;
   column-gap: 1.25rem;
@@ -926,6 +936,7 @@ button[aria-label]::before {
 .metrics__item {
   display: flex;
   flex-direction: column-reverse;
+  justify-content: start;
   row-gap: 0.625rem;
   padding: 3.125rem;
 }
@@ -2455,6 +2466,9 @@ button[aria-label]::before {
 .field__control::placeholder {
   color: var(--color-dark-40);
 }
+.field__control:user-invalid {
+  border-color: var(--color-red);
+}
 .field textarea.field__control {
   resize: vertical;
   min-height: 10.1875rem;
@@ -2647,6 +2661,9 @@ button[aria-label]::before {
 .checkbox__input:not(:checked)::after {
   opacity: 0;
   visibility: hidden;
+}
+.checkbox__input:user-invalid {
+  border-color: var(--color-red);
 }
 .checkbox__input::after {
   content: "✔";
